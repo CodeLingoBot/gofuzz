@@ -80,7 +80,7 @@ func TestFuzz_basic(t *testing.T) {
 		if n, v := "s", obj.S; v == "" {
 			failed[n] = failed[n] + 1
 		}
-		if n, v := "b", obj.B; v == false {
+		if n, v := "b", obj.B; ! v {
 			failed[n] = failed[n] + 1
 		}
 		if n, v := "t", obj.T; v.IsZero() {
